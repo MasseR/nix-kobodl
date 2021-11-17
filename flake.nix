@@ -14,5 +14,10 @@
         '';
       };
       defaultPackage = packages.kobodl;
+      apps.kobodl = {
+        type = "app";
+        program = "${defaultPackage}/bin/kobodl";
+      };
+      defaultApp = apps.kobodl;
     });
 }
